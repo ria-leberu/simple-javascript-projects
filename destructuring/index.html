@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const alphabet = ["A", "B", "C", "D", "E", "F"];
+      const numbers = ["1", "2", "3", "4", "5", "6"];
+
+      /* const a = alphabet[0];
+      const b = alphabet[1];
+      console.log(a);
+      console.log(b); */
+
+      //for (i = 0; i < alphabet.length; i++) console.log(alphabet[i]);
+
+      /*  const [a, b] = alphabet; //decomposition associates the variables with their place in the index of the array
+      console.log(a);
+      console.log(b); */
+
+      /* //you can skip elements by having a blank comma
+      //you can use ... to indicate the rest of the array
+      const [a, , c, ...rest] = alphabet;
+      console.log(a);
+      console.log(c);
+      console.log(rest);
+
+      //... can combine arrays
+      const newArray = [...alphabet, ...numbers];
+      console.log(newArray); */
+
+      /* function sumAndMultiply(a, b) {
+        return [a + b, a * b];
+      }
+
+      const [sum, multiply, division = "N/A"] = sumAndMultiply(2, 3);
+      console.log(sum);
+      console.log(multiply);
+      console.log(division); */
+
+      const personOne = {
+        name: "Kyle",
+        age: 24,
+        address: {
+          city: "Somewhere",
+          state: "One of them",
+        },
+      };
+      const personTwo = {
+        name: "Sally",
+        age: 32,
+        favoriteFood: "Watermelon",
+        address: {
+          city: "Somewhere else",
+          state: "Another one of them",
+        },
+      };
+
+      /* const { name: firstName, age, favoriteFood = "Rice" } = personTwo;
+
+      console.log(firstName);
+      console.log(age);
+      console.log(favoriteFood); */
+
+      //destructuring can occur inside a function parameter
+      function printUser({ name, age }) {
+        console.log(`Name is: ${name}. Age is ${age}`);
+      }
+
+      printUser(personTwo);
+    </script>
+  </body>
+</html>
